@@ -1,0 +1,14 @@
+####
+# @name loginusingAuth0
+POST https://dev-lan01lp56onnm2jo.eu.auth0.com/oauth/token
+content-type: application/json
+
+{"client_id":"wWbtuuzGEA2ktjs80fty1rVZyhFH7aMh",
+"client_secret":"rKYXFhRgpbRwaArzYZzs7GEJColJbTqfBJ_yaRs9_2gZ5HAGtQ5qFAC7p-MCqgXa",
+"audience":"recipesid",
+"grant_type":"client_credentials"}
+
+
+####
+GET http://localhost:3000/recipes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2luZWFkb2ciLCJpYXQiOjE2NzEzMjY5NTYsImV4cCI6MTY3MTMyNzI1Nn0.Je2qubWWvlMPL7OX_1p7LuuopY6YBbzzzV2iZHduMbA

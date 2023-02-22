@@ -1,0 +1,98 @@
+###
+###
+# post rquest with correct data
+POST http://localhost:3000/recipes HTTP/1.1
+content-type : application/json
+
+{ "recipeName" : "Spagetti Bolognese",
+"prepInstructions" : "cook mince with onion and seasoning ass your tomato sauce and boil your spagetti",
+"mealType" : "dinner"}
+###
+# meal type must be breakfast lunch or dinner
+POST http://localhost:3000/recipes HTTP/1.1
+content-type : application/json
+
+{ "recipeName" : "Bagel",
+"prepInstructions" : "Toast Bagel add butter chicken, mozzarella and homemade pest leave under grill for 4mins",
+"mealType" : "snack"}
+###
+#get books
+GET http://localhost:3000/recipes HTTP/1.1
+###
+#gets recipes by recipe name
+###ERROR with live Client 
+GET http://localhost:3000/recipes?recipeName=Chicken Curry HTTP/1.1
+
+###
+## return an individual recipe
+GET http://localhost:3000/recipes/6353bde6f2b693b365d1371c HTTP/1.1
+###
+## deletes recipe by ID
+DELETE HTTP://localhost:3000/recipes/63552725b83699cdcc92f71b
+
+#######################################
+### this fails because it is not on an individual resource
+DELETE HTTP://localhost:3000/recipes http 1.1 HTTP/1.1
+###
+##put request on individual source resource which fails as the resource cannot be founf
+
+PUT http://localhost:/3000/recipes/63505741bf8de87da48c6c4 HTTP/1.1
+content-type : application/json
+
+###
+##put request on individual source resource which fails as the data is not valid
+##The connection was rejected. Either the requested service isn’t running on the requested server/port, the proxy settings in vscode are misconfigured, or a firewall is blocking requests. Details: RequestError: connect ECONNREFUSED 127.0.0.1:443.
+PUT http://localhost:/3000/recipes HTTP/1.1
+content-type : application/json
+
+    { "recipeName" : "Spagetti Bolognese",
+"prepInstructions" : "cook mince with onion and seasoning ass your tomato sauce add grated carrot and boil your spagetti",
+"mealType" : "lunch"}
+
+###
+## put request on an individual
+PUT http://localhost:/3000/recipes/63505741bf8de87da48c6c4 HTTP/1.1
+content-type : application/json
+
+
+### 
+
+# @name loginUsingAuthLocal
+POST http://localhost:3000/auth/local HTTP/1.1
+content-type: application/json
+
+
+{"username" : "sineadog",
+"password" : "april25"}
+
+####
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{ "username": "user#110",
+"email" : "una@here.ie",
+"password" : "password10",
+"roles": ["admin", "edit"]}
+
+###
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{ "username": "seafraogrady",
+"email" : "seafra@wp.ie",
+"password" : "fiadh10",
+"roles": ["admin", "edit"]}
+####
+POST http://localhost:3000/auth/local HTTP/1.1
+content-type: application/json
+
+{ "username": "user#110",
+"password" : "password10"}
+###
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{ "username": "sineadog",
+"email" : "sinead@wp.ie",
+"password" : "april25",
+"roles": ["admin", "edit"]}
