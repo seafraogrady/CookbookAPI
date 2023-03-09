@@ -51,7 +51,7 @@ router.get('/', async (req,res) => {
 router.get('/:id', async (req,res) =>  {
 
     try {
-        const recipe = await Recipe.findById(req.paramas.id);
+        const recipe = await Recipe.findById(req.params.id);
         if (recipe) {
             res.json(recipe);
         }
