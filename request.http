@@ -25,10 +25,10 @@ GET http://localhost:3000/recipes?recipeName=Chicken Curry HTTP/1.1
 
 ###
 ## return an individual recipe
-GET http://localhost:3000/recipes/6353bde6f2b693b365d1371c HTTP/1.1
+GET http://localhost:3000/recipes/6380018e5845e187efd6d2b9 HTTP/1.1
 ###
 ## deletes recipe by ID
-DELETE HTTP://localhost:3000/recipes/63552725b83699cdcc92f71b
+DELETE HTTP://localhost:3000/recipes/637ffea75845e187efd6d2ab
 
 #######################################
 ### this fails because it is not on an individual resource
