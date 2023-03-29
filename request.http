@@ -4,8 +4,7 @@
 POST http://localhost:3000/recipes HTTP/1.1
 content-type : application/json
 
-{ "recipeName" : "Spagetti Bolognese",
-"prepInstructions" : "cook mince with onion and seasoning ass your tomato sauce and boil your spagetti",
+{ "recipeName" : "orange juice",
 "mealType" : "dinner"}
 ###
 # meal type must be breakfast lunch or dinner
@@ -55,22 +54,20 @@ PUT http://localhost:/3000/recipes/63505741bf8de87da48c6c4 HTTP/1.1
 content-type : application/json
 
 
-### 
-
-# @name loginUsingAuthLocal
+### login
 POST http://localhost:3000/auth/local HTTP/1.1
 content-type: application/json
 
 
-{"username" : "sineadog",
-"password" : "april25"}
+{"username" : "seafranighradaigh",
+"password" : "password10"}
 
 ####
 POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
-{ "username": "user#110",
-"email" : "una@here.ie",
+{ "username": "seafranighradaigh",
+"email" : "seafra@here.ie",
 "password" : "password10",
 "roles": ["admin", "edit"]}
 
@@ -92,7 +89,8 @@ content-type: application/json
 POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
-{ "username": "sineadog",
-"email" : "sinead@wp.ie",
+{ "username": "seafraogrady123",
+"email" : "seafra@westport.ie",
 "password" : "april25",
 "roles": ["admin", "edit"]}
+

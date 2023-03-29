@@ -28,7 +28,10 @@ const recipeSchema = new mongoose.Schema({
     method: methodSchema,
     cookTime: String,
     prepTime:String,
-    mealType: String
+    mealType: String,
+    createdBy: { type:mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+}
 
 })
 
